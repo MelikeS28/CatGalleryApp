@@ -8,12 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var catImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func getCatTapped(_ sender: Any) {
+          fetchCat()
+    }
+    
+    func fetchCat() {
+        NetworkManager.shared.fetchCatImages { [weak self] result in
+            switch result {
 
+            case .success(let image):
+                self?.catImageView.image = image
+
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
 

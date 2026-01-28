@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FACCF5E0074F45D1A0EE800B /* Pods_CatGalleryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10897FD73C37FE1E9CA7515 /* Pods_CatGalleryApp.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		0C7C83202F02DB7200A6567F /* CatGalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatGalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDCF22A7CC6C4917EE8E212 /* Pods-CatGalleryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGalleryApp.debug.xcconfig"; path = "Target Support Files/Pods-CatGalleryApp/Pods-CatGalleryApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D2B89BEF5F70A749E97D90A7 /* Pods-CatGalleryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGalleryApp.release.xcconfig"; path = "Target Support Files/Pods-CatGalleryApp/Pods-CatGalleryApp.release.xcconfig"; sourceTree = "<group>"; };
+		E10897FD73C37FE1E9CA7515 /* Pods_CatGalleryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGalleryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACCF5E0074F45D1A0EE800B /* Pods_CatGalleryApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				0C7C83222F02DB7200A6567F /* CatGalleryApp */,
 				0C7C83212F02DB7200A6567F /* Products */,
+				54FE4D8AD43BED41C21E7BEC /* Pods */,
+				5258AAB1D06A43DE66CCBFF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5258AAB1D06A43DE66CCBFF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E10897FD73C37FE1E9CA7515 /* Pods_CatGalleryApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54FE4D8AD43BED41C21E7BEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BDCF22A7CC6C4917EE8E212 /* Pods-CatGalleryApp.debug.xcconfig */,
+				D2B89BEF5F70A749E97D90A7 /* Pods-CatGalleryApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C7C83332F02DB7300A6567F /* Build configuration list for PBXNativeTarget "CatGalleryApp" */;
 			buildPhases = (
+				87E7F0BC19AF96DA620E5966 /* [CP] Check Pods Manifest.lock */,
 				0C7C831C2F02DB7200A6567F /* Sources */,
 				0C7C831D2F02DB7200A6567F /* Frameworks */,
 				0C7C831E2F02DB7200A6567F /* Resources */,
+				D737D9981ACDEA8E3356B827 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				0C7C83222F02DB7200A6567F /* CatGalleryApp */,
 			);
 			name = CatGalleryApp;
-			packageProductDependencies = (
-			);
 			productName = CatGalleryApp;
 			productReference = 0C7C83202F02DB7200A6567F /* CatGalleryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		87E7F0BC19AF96DA620E5966 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatGalleryApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D737D9981ACDEA8E3356B827 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatGalleryApp/Pods-CatGalleryApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatGalleryApp/Pods-CatGalleryApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatGalleryApp/Pods-CatGalleryApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0C7C831C2F02DB7200A6567F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,11 +213,13 @@
 /* Begin XCBuildConfiguration section */
 		0C7C83342F02DB7300A6567F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BDCF22A7CC6C4917EE8E212 /* Pods-CatGalleryApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatGalleryApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -171,11 +246,13 @@
 		};
 		0C7C83352F02DB7300A6567F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2B89BEF5F70A749E97D90A7 /* Pods-CatGalleryApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatGalleryApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
